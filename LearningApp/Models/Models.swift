@@ -44,7 +44,7 @@ struct Test: Decodable, Identifiable {
 
 struct Question: Decodable, Identifiable {
     
-    var id: String
+    var id: Int
     var content: String
     var correctIndex: Int
     var answers: [String]
