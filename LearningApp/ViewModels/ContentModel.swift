@@ -25,6 +25,9 @@ class ContentModel: ObservableObject {
     
     var styleData: Data?
     
+    // Current selected content and test
+    @Published var currentContentSelected: Int?
+    
     init() {
         getLocalData()
     }
@@ -143,12 +146,11 @@ class ContentModel: ObservableObject {
         
         // Techique 1
         if let attributedString = try? NSAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html], documentAttributes: nil) {
-            
+
             resultString = attributedString
         }
         
         // Technique 2
-        
 //        do {
 //            let attributedString = try NSAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html], documentAttributes: nil)
 //            resultString = attributedString
