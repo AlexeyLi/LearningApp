@@ -124,7 +124,10 @@ struct TestView: View {
             .navigationBarTitle("\(model.currentModule?.category ?? "") Test")
         } else {
             // Test hasn't loaded yet
-            ProgressView()
+            // ProgressView()
+            
+            // If current question is nill, we show the result view
+            TestResultView(numCorrect: numCorrect)
         }
     }
     
